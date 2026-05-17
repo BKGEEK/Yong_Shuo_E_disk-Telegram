@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * 硬盘空间 - 系统配置
  */
@@ -6,7 +6,7 @@
 session_start();
 
 define('SITE_NAME', '硬盘空间');
-define('SITE_URL', 'https://repo.888422.xyz');
+define('SITE_URL', 'https://yingpankongjian.bosmao.cn');
 define('TELEGRAM_BOT_TOKEN', '');
 define('TELEGRAM_CHAT_ID', '');
 define('TELEGRAM_API_BASE', 'https://api.telegram.org');
@@ -82,7 +82,8 @@ function getSiteSettings() {
         $settings = [
             'site_title' => '硬盘空间',
             'site_subtitle' => '云端资源网盘',
-            'site_notice' => "欢迎访问硬盘空间\n本网站提供各类资源下载，请合理使用。"
+            'site_notice' => "欢迎访问硬盘空间\n本网站提供各类资源下载，请合理使用。",
+            'home_message' => ''
         ];
         try {
             $stmt = $db->query("SELECT setting_key, setting_value FROM site_settings");
