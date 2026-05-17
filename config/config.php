@@ -6,9 +6,9 @@
 session_start();
 
 define('SITE_NAME', '硬盘空间');
-define('SITE_URL', 'https://yingpankongjian.bosmao.cn');
-define('TELEGRAM_BOT_TOKEN', '8840496904:AAE1QyaYYAqzOlLw5ZvLyFDSo_xWB4mB-sU');
-define('TELEGRAM_CHAT_ID', '-1003825222791');
+define('SITE_URL', 'https://repo.888422.xyz');
+define('TELEGRAM_BOT_TOKEN', '');
+define('TELEGRAM_CHAT_ID', '');
 define('TELEGRAM_API_BASE', 'https://api.telegram.org');
 define('TELEGRAM_FILE_BASE', 'https://api.telegram.org/file/bot');
 define('MAX_UPLOAD_SIZE', 500 * 1024 * 1024);
