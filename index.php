@@ -83,6 +83,7 @@ $siteSettings = getSiteSettings();
 $siteTitle = $siteSettings['site_title'];
 $siteSubtitle = $siteSettings['site_subtitle'];
 $siteNotice = $siteSettings['site_notice'];
+$homeMessage = $siteSettings['home_message'] ?? '';
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -100,9 +101,11 @@ $siteNotice = $siteSettings['site_notice'];
             <div class="sidebar-section">
                 <div class="sidebar-title">网站公告</div>
                 <div class="sidebar-content notice-content">
-                    <?php foreach (explode("\n", $siteNotice) as $line): ?>
-                    <p><?= htmlspecialchars($line) ?></p>
-                    <?php endforeach; ?>
+                    <?php if (trim($siteNotice) !== ''): ?>
+                        <?php foreach (explode("\n", $siteNotice) as $line): ?>
+                        <p><?= htmlspecialchars($line) ?></p>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="sidebar-section">
@@ -155,3 +158,8 @@ $siteNotice = $siteSettings['site_notice'];
     </div>
 </body>
 </html>
+<?php if (trim($homeMessage) !== ''): ?>
+<div style="position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:9999;">
+    <div class="home-message"><?= $homeMessage ?></div>
+</div>
+<?php endif; ?>
